@@ -19,6 +19,15 @@
       }
     }
     
+## Autre format
+
+    (function () {
+      var id = 0
+      this.next = function () {
+        console.log(id++)
+      }
+    }).apply(namespace.method)
+    
 ## Arrow fonction
     
     var absValue = (number) => {  
