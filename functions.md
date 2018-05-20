@@ -8,6 +8,22 @@
       }
     })(namespace)
     
+## Module pattern
+
+    var namespace = function () {
+        // set up private data
+        var arr = []; // not visible outside
+        for(var i=0; i<4; i++) {
+            arr.push(i)
+        }
+        return {
+            // read-only access via getter
+            get values() {
+                return arr
+            }
+        }
+    }()
+    
 ## Fonction expression
 
     namespace.mafonction = {
