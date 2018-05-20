@@ -52,3 +52,28 @@
       }
       return number;
     }
+    
+    
+### Exemple
+
+    (function($) {
+
+        var namespace;
+
+        namespace = {
+            something : function() {
+                alert('hello there!');
+            },
+            bodyInfo : function() {
+                alert($('body').attr('id'));
+            }
+        };
+
+        window.ns = namespace;
+
+    })(this.jQuery);
+
+    $(function() {
+        ns.something();
+        ns.bodyInfo();
+    });
