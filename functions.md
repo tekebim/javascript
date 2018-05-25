@@ -53,6 +53,18 @@
       return number;
     }
     
+## Arrow bis
+    
+    const SITE = window.SITE || {}
+
+        SITE.navigation = () => {
+        };
+
+        SITE.homePage = () => {	
+        };
+
+        SITE.portfolioPage = () => {
+        };
     
 ### Exemple
 
