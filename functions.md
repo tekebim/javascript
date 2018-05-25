@@ -113,3 +113,34 @@
     person.shout();  // "jason"
     person.shout2(); // "global"
     person.shout3(); // "jason"
+
+
+## Exemple 3
+
+```js
+    var SITE = window.SITE || {};
+
+    SITE.Namespace = (function() {
+        var self = {}
+
+        // Private
+        var A = function() {
+            console.log('A fct')
+        };
+
+        // Public
+        self.B = function() {
+            A()
+            this.C()
+            console.log('B fct')
+        };
+        self.C = function() {
+            console.log('C fct')
+        }
+
+        return self;
+    }());
+    SITE.Namespace.A(); // Doesn't work
+    SITE.Namespace.B(); // Works
+    SITE.Namespace.C(); // Works
+```
