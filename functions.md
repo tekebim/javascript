@@ -89,3 +89,27 @@
         ns.something();
         ns.bodyInfo();
     });
+
+
+### Arrow functions examples
+
+    window.name = "global";
+
+    var person = {
+        name: "jason",
+
+        shout: function () {
+            console.log("my name is ", this.name);
+        },
+        shout2: () => {
+            console.log("my name is ", this.name);
+        },
+        // Shorter syntax
+        shout3() {
+            console.log("my name is ", this.name);
+        }
+    };
+
+    person.shout();  // "jason"
+    person.shout2(); // "global"
+    person.shout3(); // "jason"
